@@ -1,0 +1,368 @@
+/* --- 1. VARIABLES ET RESET --- */
+:root {
+    --primary: #1a1a1a;
+    --accent: #007aff;
+    --text: #333;
+    --light: #f4f4f4;
+    --white: #ffffff;
+    --shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* --- 2. NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* --- 3. SECTION HERO (ACCUEIL) --- */
+.hero {
+    min-height: 85vh;
+    padding: 4rem 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    order: 1; /* Texte en premier */
+    max-width: 900px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* Bio Structure */
+.bio-container {
+    display: flex;
+    gap: 3rem;
+    text-align: left;
+    margin: 2rem 0;
+    align-items: flex-start;
+}
+
+.bio-text {
+    flex: 2;
+}
+
+.bio-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    color: #444;
+}
+
+.bio-text strong {
+    color: var(--accent);
+}
+
+.bio-highlights {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid var(--accent);
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.highlight-item .icon { font-size: 1.5rem; }
+
+.highlight-item p {
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Image de profil sous le texte */
+.image.profil {
+    order: 2; /* Image en deuxième */
+    margin-top: 1rem;
+}
+
+.image.profil img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: var(--shadow);
+}
+
+/* --- 4. BOUTONS --- */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+    font-weight: 600;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    color: white;
+}
+
+/* --- 5. GRILLE DE PROJETS --- */
+.container {
+    padding: 5rem 10%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    background: var(--light);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.project-gallery {
+    display: flex;
+    height: 220px;
+    gap: 2px;
+    background: #fff;
+}
+
+.project-gallery img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 2rem;
+}
+
+.project-info h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    color: #666;
+    text-align: justify;
+}
+
+/* --- 6. FORMULAIRE DE CONTACT --- */
+
+
+.contact-split {
+    display: flex;
+    min-height: 80vh; 
+    width: 100%;
+}
+
+
+.contact-details {
+    flex: 1;
+    background-color: #f2ece4; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.details-content {
+    max-width: 400px;
+    width: 100%;
+}
+
+.contact-details h2 {
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #4a453e;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #8c867e;
+    margin-bottom: 0.5rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.contact-item p {
+    font-size: 1.2rem;
+    color: #4a453e;
+    line-height: 1.4;
+}
+
+
+.contact-visual {
+    flex: 1;
+    overflow: hidden;
+}
+
+.contact-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+/* --- 7. FOOTER --- */
+footer {
+    text-align: center;
+    padding: 4rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* --- 8. RESPONSIVE --- */
+@media (max-width: 900px) {
+    .bio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .bio-highlights {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        border-left: none;
+        border-bottom: 4px solid var(--accent);
+    }
+
+    .hero h1 { font-size: 2.8rem; }
+        .contact-split {
+        flex-direction: column; /* Empile l'image et le texte sur mobile */
+    }
+    
+    .contact-visual {
+        height: 300px; /* Hauteur fixe pour l'image sur mobile */
+        order: -1; /* Met l'image au-dessus du texte sur mobile */
+    }
+
+    .contact-details {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-details h2 {
+        font-size: 2.2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav { flex-direction: column; gap: 1rem; }
+    nav ul li { margin: 0 1rem; }
+    .project-gallery { height: 180px; }
+    .hero-actions { flex-direction: column; }
+}
