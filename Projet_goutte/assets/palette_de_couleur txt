@@ -1,0 +1,8 @@
+Rôle	Couleur	Code	Description
+🌊 Couleur principale (Primary)	Bleu lagon	#4A90E2	Base du site — évoque la mer claire et la confiance
+🌴 Secondaire (Secondary)	Vert menthe	#50E3C2	Accent naturel et frais, parfait pour boutons ou survols
+🌞 Accent chaud	Corail doux	#FF8C69	Apporte de la vie, idéal pour des détails ou alertes
+🏖️ Fond clair	Sable pâle	#FFF8E7	Arrière-plan doux, lumineux et chaleureux
+🌅 Texte foncé	Gris bleu profond	#2C3E50	Contraste parfait, lisible et élégant
+🌺 Survol (hover)	Vert citron doux	#7FFFD4	Petit effet “fraîcheur tropicale” au survol
+🌌 Couleur sombre (mode nuit / contraste)	Bleu nuit	#   	Pour headers ou version dark du site

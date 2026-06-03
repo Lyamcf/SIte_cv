@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../image/fond-plage.jpg);
+    background-position: center center;    
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header#page_header {
+  width: 80%;
+  height: 100px;
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: center;
+  background-color: #2C3E50;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  border-radius: 5px
+}
+
+header#page_header h1 {
+  width: auto;
+  margin-left: 50px;
+  color: #FFF8E7;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+header img{
+  height: 80px ;
+  margin-left: 75px ;
+  
+}
+nav.menu_horizontal {
+  width: 79%;
+}
+
+nav.menu_horizontal ul {
+  margin: 50px 30px 50px 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+nav.menu_horizontal ul li a {
+  padding: 7px 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2A323F;
+  background: #FFF8E7;
+  border-radius: 12px;
+  border: 1px solid #2A323F;
+  box-shadow: 0 2px 5px rgba(63,63,127,0.2);
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+nav.menu_horizontal ul li a:hover {
+  background: linear-gradient(#7FFFD4);
+  color: #000;
+  border-color: #2A323F;
+  box-shadow: 0 4px 12px rgba(63,63,127,0.6);
+  cursor: pointer;
+}
+
+footer{
+  width: 100%;
+  background-color: #2A323F;
+  display: inline-block;
+  height: 350px;
+}
+
+footer  a  img {
+  
+  margin: 10px;
+  width: 50px;  
+  display: inline-block;
+}
+footer > div{
+  
+  margin: 10px;
+  text-align: center;
+
+}
+
+footer div h2,h3 {
+  margin-bottom: 0;
+  color: white;
+ 
+}
+
+
+.panier-container {
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 30px;
+  background: rgba(255, 248, 231, 0.7); 
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.3); 
+  border: 1px solid #2A323F;
+  color: #2A323F;
+}
+
+.article {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  background-color: #FFF8E7;
+  border-radius: 10px;
+  border: 1px solid #2A323F;
+  box-shadow: 0 2px 6px rgba(44, 62, 80, 0.15);
+  color: #2A323F;
+}
+
+
+
+.panier-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.panier-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.article img {
+  width: 10%;
+  height: 10%;
+  border-radius: 8px;
+  border: 1px solid #ccc;  
+}
+
+.article .info {
+  flex-grow: 1;
+}
+
+.article .info h3 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: black;
+}
+
+.article .info p {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.article .prix {
+  font-weight: 700;
+  font-size: 20px;
+  min-width: 60px;
+  text-align: right;
+  color: #2C3E50;
+}
+
+.total {
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: right;
+  font-weight: 700;
+  border-top: 2px solid #2A323F;
+  padding-top: 15px;
+}
